@@ -46,7 +46,7 @@ jobs:
           language = "${{ github.event.inputs.language }}"
           code = "${{ github.event.inputs.code }}"
           testcases = json.loads("${{ github.event.inputs.testcases }}")
-          config = json.loads("${{ github.event.inputs.config or '{}' }}")
+          config_input = "${{ github.event.inputs.config }}" config = json.loads(config_input) if config_input else {}
           
           print(f"判题任务: {judge_id}")
           print(f"语言: {language}")
