@@ -1,0 +1,27 @@
+name: OJ Judge Worker 1
+
+# 监听两种事件：
+# 1. repository_dispatch: 后端程序通过 API 触发
+# 2. workflow_dispatch: 允许你在网页上手动点击运行（方便测试）
+on:
+  repository_dispatch:
+    types: [judge_task]
+  workflow_dispatch:
+
+jobs:
+  run-judge:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 打印接收到的信息
+        run: |
+          echo "收到判题任务啦！"
+          echo "事件类型: ${{ github.event.action }}"
+          # 如果是后端发来的，代码通常在 client_payload 里
+          echo " payload: ${{ toJson(github.event.client_payload) }}"
+          
+      - name: 模拟判题
+        run: |
+          echo "正在编译代码..."
+          echo "正在运行测试..."
+          echo "判题完成！结果是 AC (Accepted)"
