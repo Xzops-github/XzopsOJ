@@ -1,5 +1,7 @@
-#此为Xzops把HHOJ的项目Fork之后的仓库，用于个人使用，原项目请搜索HHOJ！
-#再次感谢HHOJ的所有开发者！
+# 此为Xzops把HHOJ的项目Fork之后的仓库，用于个人使用，原项目请搜索HHOJ！
+
+# 再次感谢HHOJ的所有开发者！
+
 # HhOJ Online Judge Service
 
 基于 GitHub Actions 的在线评测系统。
