@@ -201,7 +201,7 @@ jobs:
         run: python3 judge.py
       
       - name: 上传判题结果
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: judge-results
           path: /tmp/judge_result.json
